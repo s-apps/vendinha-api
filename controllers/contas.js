@@ -53,6 +53,7 @@ exports.read = async (req, res) => {
     const limit = size;
 
     await Contas.findAndCountAll({ limit, offset }).then(contas => {
+        console.log(contas.length)
         const totalPages = Math.ceil(contas.count / limit);
         const response = {
             totalItems: contas.count,
@@ -80,7 +81,7 @@ exports.readById = async (req, res) => {
     const id = req.query.id;
     const conta = await Contas.findOne({ where: { id } });
     if (conta === null) {
-
+        res.json('Conta não encontrada')
     } else {
         res.json(conta)
     }

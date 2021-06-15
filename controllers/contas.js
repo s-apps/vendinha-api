@@ -1,5 +1,5 @@
 const { Sequelize, Op } = require('sequelize');
-const sequelize = new Sequelize('mysql://silverio:Idpdx32d@@localhost:3306/vendinha');
+const sequelize = new Sequelize('mysql://vendinha:Vendinh@@localhost:3306/vendinha');
 
 const Contas = sequelize.define('contas', {
     id: {

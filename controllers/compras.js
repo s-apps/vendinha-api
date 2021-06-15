@@ -1,5 +1,5 @@
 const { Sequelize } = require('sequelize');
-const sequelize = new Sequelize('mysql://silverio:Idpdx32d@@localhost:3306/vendinha');
+const sequelize = new Sequelize('mysql://vendinha:Vendinh@@localhost:3306/vendinha');
 
 const Compras = sequelize.define('compras', {
     compras_id: {
